@@ -1,0 +1,5 @@
+Run LavaMD
+LavaMD 1 run, sample 10
+LavaMD 2 run, sample 15
+LavaMD 3 run, sample 20
+LavaMD 4 run, sample 25
