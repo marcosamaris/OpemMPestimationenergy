@@ -1,0 +1,2 @@
+ludcmp.o: ludcmp.c ../../../utilities/polybench.h ludcmp.h
+polybench.o: ../../../utilities/polybench.c

@@ -1,0 +1,2 @@
+fdtd-apml.o: fdtd-apml.c ../../utilities/polybench.h fdtd-apml.h
+polybench.o: ../../utilities/polybench.c

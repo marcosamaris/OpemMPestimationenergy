@@ -1,0 +1,2 @@
+symm.o: symm.c ../../../utilities/polybench.h symm.h
+polybench.o: ../../../utilities/polybench.c

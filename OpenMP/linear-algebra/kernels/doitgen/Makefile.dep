@@ -1,0 +1,2 @@
+doitgen.o: doitgen.c ../../../utilities/polybench.h doitgen.h
+polybench.o: ../../../utilities/polybench.c

@@ -1,0 +1,2 @@
+adi.o: adi.c ../../utilities/polybench.h adi.h
+polybench.o: ../../utilities/polybench.c

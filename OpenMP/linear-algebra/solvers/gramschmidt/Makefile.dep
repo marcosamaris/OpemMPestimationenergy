@@ -1,0 +1,2 @@
+gramschmidt.o: gramschmidt.c ../../../utilities/polybench.h gramschmidt.h
+polybench.o: ../../../utilities/polybench.c

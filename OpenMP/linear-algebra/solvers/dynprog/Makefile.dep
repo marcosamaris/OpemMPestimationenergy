@@ -1,0 +1,2 @@
+dynprog.o: dynprog.c ../../../utilities/polybench.h dynprog.h
+polybench.o: ../../../utilities/polybench.c

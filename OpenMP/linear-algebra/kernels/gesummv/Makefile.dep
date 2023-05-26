@@ -1,0 +1,2 @@
+gesummv.o: gesummv.c ../../../utilities/polybench.h gesummv.h
+polybench.o: ../../../utilities/polybench.c

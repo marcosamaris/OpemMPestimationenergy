@@ -1,0 +1,2 @@
+mvt.o: mvt.c ../../../utilities/polybench.h mvt.h
+polybench.o: ../../../utilities/polybench.c

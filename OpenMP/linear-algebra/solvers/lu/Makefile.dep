@@ -1,0 +1,2 @@
+lu.o: lu.c ../../../utilities/polybench.h lu.h
+polybench.o: ../../../utilities/polybench.c

@@ -1,0 +1,2 @@
+gemm.o: gemm.c ../../../utilities/polybench.h gemm.h
+polybench.o: ../../../utilities/polybench.c

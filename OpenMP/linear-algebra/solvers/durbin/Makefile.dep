@@ -1,0 +1,2 @@
+durbin.o: durbin.c ../../../utilities/polybench.h durbin.h
+polybench.o: ../../../utilities/polybench.c

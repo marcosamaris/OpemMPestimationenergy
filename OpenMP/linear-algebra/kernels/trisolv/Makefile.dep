@@ -1,0 +1,2 @@
+trisolv.o: trisolv.c ../../../utilities/polybench.h trisolv.h
+polybench.o: ../../../utilities/polybench.c

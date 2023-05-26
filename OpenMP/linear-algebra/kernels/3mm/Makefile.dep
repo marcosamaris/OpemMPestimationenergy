@@ -1,0 +1,2 @@
+3mm.o: 3mm.c ../../../utilities/polybench.h 3mm.h
+polybench.o: ../../../utilities/polybench.c

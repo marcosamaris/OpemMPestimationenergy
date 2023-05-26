@@ -1,0 +1,2 @@
+seidel-2d.o: seidel-2d.c ../../utilities/polybench.h seidel-2d.h
+polybench.o: ../../utilities/polybench.c

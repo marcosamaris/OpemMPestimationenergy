@@ -1,0 +1,3 @@
+convolution-2d.o: convolution-2d.c ../../utilities/polybench.h \
+ convolution-2d.h
+polybench.o: ../../utilities/polybench.c
