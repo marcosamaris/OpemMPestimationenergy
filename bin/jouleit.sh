@@ -324,10 +324,11 @@ get_raw_energy() {
 
     ###############################################
     if [ -n "$outputfile" ]; then
-
+	echo $outputfile
         $($@) 2>&1 >>$outputfile
         exit_code=$?
     else
+    	echo $outputfile
         $($@)
         exit_code=$?
     fi
