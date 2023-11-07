@@ -290,7 +290,7 @@
 #	echo $output >> output_gemm.csv
 #	echo $output
 #done
-#mv output_gemm.csv   ../../../../../../data_Polybench_Polybench/output
+#mv output_gemm.csv   ../../../../../../data/output_Polybench
 #cd -
 #
 #cd OpenMP/linear-algebra/kernels/doitgen
@@ -308,7 +308,7 @@
 #	echo $output >> output_doitgen.csv
 #	echo $output
 #done
-#mv output_doitgen.csv   ../../../../../../data_Polybench_Polybench/output
+#mv output_doitgen.csv   ../../../../../../data/output_Polybench
 #cd -
 #
 #pwd
@@ -426,5 +426,5 @@
 ###	./convolution-3d_acc
 ###
 ###done
-###mv output_convolution-3d.csv   ../../../../../../ data_Polybench/output
+###mv output_convolution-3d.csv   ../../../../../../data_Polybench/output
 ###cd -
