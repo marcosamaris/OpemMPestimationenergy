@@ -15,7 +15,7 @@
 #	echo $output >> output_convolution-2d.csv
 #	echo $output
 #done
-#mv output_convolution-2d.csv  ../../../../data/output_Polybench
+#mv output_convolution-2d.csv  ../../../../../data/output_Polybench
 #cd -
 #
 #cd OpenMP/linear-algebra/kernels/atax
@@ -71,7 +71,7 @@
 #	echo $output >> output_fdtd-apml.csv
 #	echo $output
 #done
-#mv output_fdtd-apml.csv   ../../../../data/output_Polybench
+#mv output_fdtd-apml.csv   ../../../../../data/output_Polybench
 #cd -
 #cd OpenMP/linear-algebra/kernels/cholesky
 #pwd
@@ -99,7 +99,7 @@
 #output=${output//$'\n'/,}
 #echo $output >> output_gesummv.csv 
 #
-#for i in `seq 20000 100 30000`; do
+#for i in `seq 4000 200 24000`; do
 #
 #gcc -O2 -I../../../utilities gesummv.c ../../../utilities/polybench.c -o gesummv_acc -DN=${i} -fopenmp
 #
@@ -180,7 +180,7 @@
 #output=${output//$'\n'/,}
 #echo $output >> output_mvt.csv 
 #
-#for i in `seq 20000 100 30000`; do
+#for i in `seq 18000 100 28000`; do
 #
 #gcc -O2 -I../../../utilities mvt.c ../../../utilities/polybench.c -o mvt_acc -DN=${i} -fopenmp
 #	output=$(./jouleit.sh -c ./mvt_acc -n)
@@ -201,7 +201,7 @@
 #output=${output//$'\n'/,}
 #echo $output >> output_gemver.csv 
 #
-#for i in `seq 20000 100 30000`; do
+#for i in `seq 18000 100 28000`; do
 #
 #	gcc -O2 -I../../../utilities gemver.c ../../../utilities/polybench.c -o gemver_acc -DN=${i} -fopenmp
 #	output=$(./jouleit.sh -c ./gemver_acc -n)
@@ -254,7 +254,7 @@
 #mv output_syr2k.csv   ../../../../../../data/output_Polybench
 #cd -
 #
-#cd OpenMP/ datamining/correlation
+#cd OpenMP/datamining/correlation
 #pwd
 #
 #output=$(./jouleit.sh -l)
@@ -273,7 +273,7 @@
 #	echo $output
 #
 #done
-#mv output_correlation.csv ../../../../data/output_Polybench
+#mv output_correlation.csv ../../../../../data/output_Polybench
 #cd -
 #
 #cd OpenMP/linear-algebra/kernels/gemm
@@ -299,7 +299,7 @@
 #output="$output;INPUT"
 #output=${output//$'\n'/,}
 #echo $output >> output_doitgen.csv 
-#for i in `seq 128 9 1028`; do
+#for i in `seq 100 7 800`; do
 #	gcc -O2 -I../../../utilities doitgen.c ../../../utilities/polybench.c -o doitgen_acc -DNQ=${i} -DNR=${i} -DNP=${i} -fopenmp
 #	
 #	output=$(./jouleit.sh -c ./doitgen_acc -n)
@@ -312,7 +312,6 @@
 #cd -
 #
 #pwd
-
 #cd OpenMP/datamining/covariance
 #pwd
 #output=$(./jouleit.sh -l)
@@ -320,7 +319,6 @@
 #output=${output//$'\n'/,}
 #echo $output >> output_covariance.csv
 #for i in `seq 800 32 4000`; do
-
 #	gcc -O2 -I../../utilities covariance.c ../../utilities/polybench.c -o covariance_acc -DN=${i} -DM=${i} -lm -fopenmp 
 #	output=$(./jouleit.sh -c ./covariance_acc -n)
 #	output="$output;$i"
@@ -328,9 +326,9 @@
 #	echo $output >> output_covariance.csv
 #	echo $output
 #done
-#mv output_covariance.csv ../../../../data/output_Polybench
+#mv output_covariance.csv ../../../../../data/output_Polybench
 #cd -
-
+#
 
 #cd OpenMP/linear-algebra/kernels/2mm
 #pwd
@@ -370,49 +368,47 @@
 #mv output_symm.csv   ../../../../../../data/output_Polybench
 #cd -
 #
-#cd OpenMP/linear-algebra/kernels/3mm
-#
-#pwd
-#output=$(./jouleit.sh -l)
-#output="$output;INPUT"
-#output=${output//$'\n'/,}
-#echo $output >> output_3mm.csv 
-#
-#for i in `seq 800 32 4000`; do
-#	gcc -O2 -I../../../utilities 3mm.c ../../../utilities/polybench.c -o 3mm_acc -DNI=${i} -DNJ=${i} -DNK=${i} -DNL=${i} -DNM=${i} -fopenmp
-#	output=$(./jouleit.sh -c ./3mm_acc -n)
-#	output="$output;$i"
-#	output=${output//$'\n'/,}
-#	echo $output >> output_3mm.csv
-#	echo $output
-#done
-#mv output_3mm.csv   ../../../../../../data/output_Polybench
-#cd -
-#
-#
-#
-#cd OpenMP/linear-algebra/solvers/gramschmidt
-#pwd
-#output=$(./jouleit.sh -l)
-#output="$output;INPUT"
-#output=${output//$'\n'/,}
-#echo $output >> output_gramscmidt.csv
-#for i in `seq 800 32 4000`;do
+cd OpenMP/linear-algebra/kernels/3mm
 
-#gcc -O2 -I../../../utilities gramschmidt.c ../../../utilities/polybench.c -o gramschmidt_acc -DNI=${i} -DNJ=${i}  -fopenmp -lm
-#
-#	output=$(./jouleit.sh -c ./gramschmidt_acc -n)
-#	output="$output;$i"
-#	output=${output//$'\n'/,}
-#	echo $output >> output_gramscmidt.csv
-#	echo $output
-#done
-#
-#mv output_gramscmidt.csv   ../../../../../../data/output_Polybench
-#cd -
-#
-##-------------------------------------------STENCILS--------------------------------------------------------------------
+pwd
+output=$(./jouleit.sh -l)
+output="$output;INPUT"
+output=${output//$'\n'/,}
+echo $output >> output_3mm.csv 
 
+for i in `seq 800 32 4000`; do
+	gcc -O2 -I../../../utilities 3mm.c ../../../utilities/polybench.c -o 3mm_acc -DNI=${i} -DNJ=${i} -DNK=${i} -DNL=${i} -DNM=${i} -fopenmp
+	output=$(./jouleit.sh -c ./3mm_acc -n)
+	output="$output;$i"
+	output=${output//$'\n'/,}
+	echo $output >> output_3mm.csv
+	echo $output
+done
+mv output_3mm.csv   ../../../../../../data/output_Polybench
+cd -
+
+
+
+cd OpenMP/linear-algebra/solvers/gramschmidt
+pwd
+output=$(./jouleit.sh -l)
+output="$output;INPUT"
+output=${output//$'\n'/,}
+echo $output >> output_gramscmidt.csv
+for i in `seq 800 32 4000`;do
+gcc -O2 -I../../../utilities gramschmidt.c ../../../utilities/polybench.c -o gramschmidt_acc -DNI=${i} -DNJ=${i}  -fopenmp -lm
+
+	output=$(./jouleit.sh -c ./gramschmidt_acc -n)
+	output="$output;$i"
+	output=${output//$'\n'/,}
+	echo $output >> output_gramscmidt.csv
+	echo $output
+done
+
+mv output_gramscmidt.csv   ../../../../../../data/output_Polybench
+cd -
+
+#-------------------------------------------STENCILS--------------------------------------------------------------------
 
 
 ###cd OpenMP/stencils/convolution-3d
